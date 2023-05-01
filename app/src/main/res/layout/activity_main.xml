@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/switch_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="8dp"
+        app:cardPreventCornerOverlap="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/holo_red_dark">
+
+            <Button
+                android:id="@+id/persons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Personagens"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:backgroundTint="@android:color/holo_red_dark">
+
+            </Button>
+
+            <Button
+                android:id="@+id/favorites"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Favoritos"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:backgroundTint="@android:color/holo_red_dark">
+
+            </Button>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <FrameLayout
+        android:id="@+id/recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_below="@id/switch_bar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sourcerecycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="320dp"
+            app:backgroundTint="@android:color/holo_red_dark"
+            app:srcCompat="@drawable/ic_dialog_download">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
